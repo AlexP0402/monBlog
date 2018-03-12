@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+
+          <p class="title">{{'titleform'|trans }}</p>
+
+          {% form_theme form'bootstrap_4_layout.html.twig' %}
+
+
+
+          {{ form_start(form) }}
+             {{ form_row(form.name, {
+             'attr':{'class': 'une classe'}
+           })  }}
+
+           <div class="ma-classe-custom">
+             {{ form_row(form.Prenom) }}
+
+            {{ form_label(form.email) }}
+            {{ form_widget(form.email) }}
+            {{ form_errors(form.email) }}
+
+           {{ form_rest(form) }}
+           {{ form_end(form) }}
+
+           <button type="submit">
+               {{'submit' | trans }}
+           </button>
+
+         </div>
+
+{% endblock %}

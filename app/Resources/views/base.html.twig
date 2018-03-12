@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}MON BLOG!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
+    </head>
+
+      <header>
+        <div>
+          <nav class="navbar fixed-top navbar-light">
+              <i class="fa fa-home "></i>
+              <i class="fa fa-user"></i>
+              <i class="fa fa-list-ul"></i>
+              <i class="fa fa-envelope-o"></i>
+              <i class="fa fa-linkedin-square"></i>
+            <ul>
+              <li><a href="{{path('home')}}">HOME</a><li>
+              <li><a href="{{path('presentation')}}">PRESENSATION</a><li>
+              <li>CV<li>
+              <li><a href="{{path('contact')}}">CONTACT</a><li>
+              <li>LinKedin<li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <div>
+        <div class="photo">
+          <p class="intro">Alexandre PEETERS</p>
+          <p class="pres">{{'pres'|trans }}</p>
+      </div>
+
+
+
+
+        {% block body %}{% endblock %}
+
+        {% block javascripts %}
+
+        {% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

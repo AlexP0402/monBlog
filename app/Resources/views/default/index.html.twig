@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+      <!-- <div>
+        <h2 class="pres">
+          {{ 'pres'|trans }}
+        </h2>
+    </div> -->
+
+    <h1>
+    <p class="presentation"> {{ 'question'|trans }} </p>
+    </h1>
+
+    <div class="text-center">
+      <img src="{{ asset('assets/img/photo.jpg') }}" class="rounded" alt="myphoto" style="height: 200px;">
+    </div>
+
+    <h2>
+    <p class="description">
+    {{ 'description'|trans }}.</p>
+    </h2>
+
+
+
+{% endblock %}
